@@ -10,4 +10,4 @@ class Translation(Model):
     text = TextField()
     
     class Meta:
-        collection_name = "translations"
+        collection_name = "quran_translations"

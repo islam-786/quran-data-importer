@@ -7,12 +7,7 @@ class Ayah(Model):
     surah_id = TextField()
     number = NumberField(int_only=True)
     number_in_surah = NumberField(int_only=True)
-    juz = NumberField(int_only=True)
-    manzil = NumberField(int_only=True)
-    ruku = NumberField(int_only=True)
-    hizb_quarter = NumberField(int_only=True)
-    sajda = BooleanField()
     arabic = TextField()
 
     class Meta:
-        collection_name = "ayahs"
+        collection_name = "quran_ayahs"
