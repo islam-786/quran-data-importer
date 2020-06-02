@@ -1,0 +1,3 @@
+import import_quran_data
+import import_translation_data
+import import_surah_data
