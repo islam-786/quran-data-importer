@@ -23,7 +23,7 @@ for line in f:
     line_count += 1
 
     if ayat_number != 0:
-        ayahNumber++
+        ayahNumber += 1
 
     ayah = Ayah()
     ayah.id = str(surah_number) + '-' + str(ayat_number)
