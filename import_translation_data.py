@@ -22,7 +22,7 @@ for single_file in onlyfiles:
     edition.save()
 
     file_location = './data/' + single_file
-    f = open(file_location, "r")
+    f = open(file_location, "r", encoding="utf8")
 
     trans_batch = fireo.batch()
     count = 0
@@ -39,7 +39,7 @@ for single_file in onlyfiles:
         text = ' '.join(line_text)
         print('For File '+edition_id +
               ' writing line...' + str(line_count))
-        line_count += 1
+        
 
         trans_id = surah_number + '-' + ayat_number
 
@@ -48,8 +48,10 @@ for single_file in onlyfiles:
         translation.ayah_id = trans_id
         translation.edition_id = edition_id
         translation.text = text.strip()
+        translation.ayah_number = line_count
         translation.save(batch=trans_batch)
 
+        line_count += 1
         count += 1
 
         if(count >= 400):
