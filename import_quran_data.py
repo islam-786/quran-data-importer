@@ -18,7 +18,7 @@ for line in f:
         print('file end')
         break
 
-    surah_number, ayat_number, line_text = line.split('|')
+    surah_number, ayat_number, line_text = line.strip().split('|')
     print(' writing line...' + str(line_count))
     line_count += 1
 

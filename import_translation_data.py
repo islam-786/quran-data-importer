@@ -35,7 +35,7 @@ for single_file in onlyfiles:
             break
 
         # print(line)
-        surah_number, ayat_number, *line_text = line.split('|')
+        surah_number, ayat_number, *line_text = line.strip().split('|')
         text = ' '.join(line_text)
         print('For File '+edition_id +
               ' writing line...' + str(line_count))
